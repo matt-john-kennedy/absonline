@@ -1,0 +1,11 @@
+<% @books.each do |book| %>
+    <div class="card" style="width: 18rem;">
+        <%= image_tag book.picture, class:"card-img-top" if book.picture.attached? %>
+        <div class="card-body">
+            <h5 class="card-title"><%= book.name %></h5>
+            <p class="card-text"><%= book.description %></p>
+            <p class="card-text"><%= book.price %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+<% end %>
